@@ -1,0 +1,5 @@
+@use "./alert/alert-theme" as alert;
+
+@mixin theme($type, $theme, $card-variants, $alert-variants) {
+  @include alert.color($theme, $alert-variants);
+}

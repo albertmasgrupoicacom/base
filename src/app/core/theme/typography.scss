@@ -1,0 +1,50 @@
+@use "@angular/material" as mat;
+
+@font-face {
+  font-family: ThemeFontFamily;
+  src: url('/assets/fonts/OpenSans/OpenSansVariable.ttf') format("opentype");
+}
+
+$heading-font-family: "ThemeFontFamily, sans-serif";
+
+$default-typo: mat.define-typography-config(
+  $headline-1: mat.define-typography-level(112px, $font-family: $heading-font-family), 
+  $headline-2: mat.define-typography-level(56px, $font-family: $heading-font-family),
+  $headline-3: mat.define-typography-level(45px, $font-family: $heading-font-family),
+  $headline-4: mat.define-typography-level(34px, $font-family: $heading-font-family),
+  $headline-5: mat.define-typography-level(24px, $font-family: $heading-font-family),
+  $headline-6: mat.define-typography-level(20px, $font-family: $heading-font-family),
+  $subtitle-1: mat.define-typography-level(20px, $font-family: $heading-font-family),
+  $subtitle-2: mat.define-typography-level(15px, $font-family: $heading-font-family),
+  $body-1: mat.define-typography-level(15px, $font-family: $heading-font-family),
+  $body-2: mat.define-typography-level(15px, 1.5, $font-family: $heading-font-family),
+  $caption: mat.define-typography-level(14px, $font-family: $heading-font-family),
+  $button: mat.define-typography-level(15px, $font-family: $heading-font-family),
+);
+
+@include mat.all-component-typographies($default-typo);
+
+$typos: 1, 2, 3, 4, 5;
+
+@each $typo in $typos {
+  .typo-#{$typo}{
+    @include mat.all-component-typographies(
+      mat.define-typography-config(
+        $headline-1: mat.define-typography-level(#{113 + $typo}px, $font-family: $heading-font-family), 
+        $headline-2: mat.define-typography-level(#{57 + $typo}px, $font-family: $heading-font-family),
+        $headline-3: mat.define-typography-level(#{46 + $typo}px, $font-family: $heading-font-family),
+        $headline-4: mat.define-typography-level(#{35 + $typo}px, $font-family: $heading-font-family),
+        $headline-5: mat.define-typography-level(#{25 + $typo}px, $font-family: $heading-font-family),
+        $headline-6: mat.define-typography-level(#{21 + $typo}px, $font-family: $heading-font-family),
+        $subtitle-1: mat.define-typography-level(#{21 + $typo}px, $font-family: $heading-font-family),
+        $subtitle-2: mat.define-typography-level(#{16 + $typo}px, $font-family: $heading-font-family),
+        $body-1: mat.define-typography-level(#{16 + $typo}px, $font-family: $heading-font-family),
+        $body-2: mat.define-typography-level(#{16 + $typo}px, $font-family: $heading-font-family),
+        $caption: mat.define-typography-level(#{15 + $typo}px, $font-family: $heading-font-family),
+        $button: mat.define-typography-level(#{16 + $typo}px, $font-family: $heading-font-family),
+      )
+    );
+  }
+}
+
+

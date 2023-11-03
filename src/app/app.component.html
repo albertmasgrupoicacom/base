@@ -1,0 +1,45 @@
+<mat-toolbar color="primary" class="d-flex justify-content-between">
+    <span>Iniciador Angular 16</span>
+    <div>
+        <button mat-icon-button aria-label="Idioma" [matMenuTriggerFor]="languageMenu">
+            <mat-icon svgIcon="language"></mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Tamaño de letra" [matMenuTriggerFor]="fontSizeMenu">
+            <mat-icon svgIcon="format_size"></mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Tema" [matMenuTriggerFor]="themeMenu">
+            <mat-icon svgIcon="contrast"></mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Modo oscuro" (click)="setDarkMode()">
+            <mat-icon [svgIcon]="themeManagerService.isDark ? 'light_mode' : 'dark_mode'"></mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+
+<mat-menu #languageMenu="matMenu">
+    <button mat-menu-item (click)="setLanguage('es')">
+        <mat-icon svgIcon="custom:es-flag"></mat-icon>
+        <span>Castellano</span>
+    </button>
+    <button mat-menu-item (click)="setLanguage('ca')">
+        <mat-icon svgIcon="custom:ca-flag"></mat-icon>
+        <span>Catalán</span>
+    </button>
+</mat-menu>
+
+<mat-menu #fontSizeMenu="matMenu">
+    <button *ngFor="let fontSize of fontSizes; index as i" mat-menu-item (click)="setFontSize(fontSize.value)">
+        <mat-icon svgIcon="filter_{{ i + 1 }}"></mat-icon>
+        <span>{{ fontSize.label }}</span>
+    </button>
+</mat-menu>
+
+<mat-menu #themeMenu="matMenu">
+    <button *ngFor="let theme of themes" mat-menu-item (click)="setTheme(theme)">
+        <span>{{ theme.name }}</span>
+    </button>
+</mat-menu>
+
+<p class="mat-headline-4 p-3">{{ 'home.title' | transloco }}</p>
+
+<router-outlet></router-outlet>

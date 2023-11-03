@@ -1,0 +1,9 @@
+dist
+node_modules
+.angular
+.vscode
+e2e
+package.json
+package-lock.json
+README.md
+tsconfig.*

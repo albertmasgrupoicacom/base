@@ -1,0 +1,10 @@
+@use "@angular/material" as mat;
+
+@import "src/app/core/theme/theme.scss";
+@import "src/app/core/theme/typography.scss";
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}

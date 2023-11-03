@@ -1,0 +1,23 @@
+{
+    "app_title": "ARQUETIPO",
+    "alt_general_img": "Logo Grupo ICA",
+    "alt_app_img": "Logo del arquetipo",
+    "screen_title": "Acceso a la plataforma",
+    "login_caption": "Acceder",
+    "clave_caption": "Cl@ve",
+    "clave_text": "También puede iniciar sesión con:",
+    "recover_login_caption": "Recuperar contraseña",
+    "form_user_caption": "Usuario",
+    "form_user_placeholder": "Introduzca su email",
+    "form_user_error": "El usuario es obligatorio",
+    "form_password_caption": "Contraseña",
+    "form_password_placeholder": "Introduzca su contraseña",
+    "form_password_error": "La contraseña es obligatoria",
+    "reset_password_prompt": "Se le va a enviar un email con un link para cambiar su contraseña al email {{email}}",
+    "reset_password_ok": "Se ha enviado un link al correo {{email}}",
+    "reset_password_error": "Debe introducir un usuario/email",
+    "recover_password_error": "El link ha caducado. O hay algún problema con la recuperación de su contraseña.",
+    "recover_password_required": "Debe cambiar el password. Es importante para la seguridad",
+    "login_title": "Login",
+    "login_description": "Componente login"
+}

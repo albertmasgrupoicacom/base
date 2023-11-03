@@ -1,0 +1,157 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "./components/index" as components;
+
+:root {
+  --primary-50: #f6eeea;
+  --primary-100: #cae9e6;
+  --primary-200: #a6dbd6;
+  --primary-300: #82ccc5;
+  --primary-400: #68c1b8;
+  --primary-500: #4db6ac;
+  --primary-600: #46afa5;
+  --primary-700: #3da69b;
+  --primary-800: #349e92;
+  --primary-900: #258e82;
+  --primary-A100: #cefff9;
+  --primary-A200: #9bfff3;
+  --primary-A400: #68ffec;
+  --primary-A700: #4effe9;
+  --primary-contrast-50: #000000;
+  --primary-contrast-100: #000000;
+  --primary-contrast-200: #000000;
+  --primary-contrast-300: #000000;
+  --primary-contrast-400: #000000;
+  --primary-contrast-500: #000000;
+  --primary-contrast-600: #000000;
+  --primary-contrast-700: #000000;
+  --primary-contrast-800: #ffffff;
+  --primary-contrast-900: #ffffff;
+  --primary-contrast-A100: #000000;
+  --primary-contrast-A200: #000000;
+  --primary-contrast-A400: #000000;
+  --primary-contrast-A700: #000000;
+
+  //ACCENT
+  --accent-50: #f9e0e0;
+  --accent-100: #f0b3b3;
+  --accent-200: #e68080;
+  --accent-300: #db4d4d;
+  --accent-400: #d42626;
+  --accent-500: #cc0000;
+  --accent-600: #c70000;
+  --accent-700: #c00000;
+  --accent-800: #b90000;
+  --accent-900: #ad0000;
+  --accent-A100: #ffd7d7;
+  --accent-A200: #ffa4a4;
+  --accent-A400: #ff7171;
+  --accent-A700: #ff5858;
+  --accent-contrast-50: #000000;
+  --accent-contrast-100: #000000;
+  --accent-contrast-200: #000000;
+  --accent-contrast-300: #ffffff;
+  --accent-contrast-400: #ffffff;
+  --accent-contrast-500: #ffffff;
+  --accent-contrast-600: #ffffff;
+  --accent-contrast-700: #ffffff;
+  --accent-contrast-800: #ffffff;
+  --accent-contrast-900: #ffffff;
+  --accent-contrast-A100: #000000;
+  --accent-contrast-A200: #000000;
+  --accent-contrast-A400: #000000;
+  --accent-contrast-A700: #000000;
+
+  // WARN
+  --warn-50: #fcf2e7;
+  --warn-100: #f8dec3;
+  --warn-200: #f3c89c;
+  --warn-300: #eeb274;
+  --warn-400: #eaa256;
+  --warn-500: #e69138;
+  --warn-600: #e38932;
+  --warn-700: #df7e2b;
+  --warn-800: #db7424;
+  --warn-900: #d56217;
+  --warn-A100: #ffffff;
+  --warn-A200: #ffe3d4;
+  --warn-A400: #ffc3a1;
+  --warn-A700: #ffb287;
+  --warn-contrast-50: #000000;
+  --warn-contrast-100: #000000;
+  --warn-contrast-200: #000000;
+  --warn-contrast-300: #000000;
+  --warn-contrast-400: #000000;
+  --warn-contrast-500: #000000;
+  --warn-contrast-600: #000000;
+  --warn-contrast-700: #000000;
+  --warn-contrast-800: #000000;
+  --warn-contrast-900: #ffffff;
+  --warn-contrast-A100: #000000;
+  --warn-contrast-A200: #000000;
+  --warn-contrast-A400: #000000;
+  --warn-contrast-A700: #000000;
+}
+
+$primary-palette: mat.define-palette(
+  (
+    50 : var(--primary-50), 100 : var(--primary-100), 200 : var(--primary-200), 300 : var(--primary-300), 400 : var(--primary-400), 500 : var(--primary-500), 600 : var(--primary-600), 700 : var(--primary-700), 800 : var(--primary-800), 900 : var(--primary-900), A100 : var(--primary-A100), A200 : var(--primary-A200), A400 : var(--primary-A400), A700 : var(--primary-A700),
+    contrast: (50 : var(--primary-contrast-50), 100 : var(--primary-contrast-100), 200 : var(--primary-contrast-200), 300 : var(--primary-contrast-300), 400 : var(--primary-contrast-400), 500 : var(--primary-contrast-500), 600 : var(--primary-contrast-600), 700 : var(--primary-contrast-700), 800 : var(--primary-contrast-800), 900 : var(--primary-contrast-900), A100 : var(--primary-contrast-A100), A200 : var(--primary-contrast-A200), A400 : var(--primary-contrast-A400), A700 : var(--primary-contrast-A700))
+  )
+);
+
+$accent-palette: mat.define-palette(
+  (
+    50 : var(--accent-50), 100 : var(--accent-100), 200 : var(--accent-200), 300 : var(--accent-300), 400 : var(--accent-400), 500 : var(--accent-500), 600 : var(--accent-600), 700 : var(--accent-700), 800 : var(--accent-800), 900 : var(--accent-900), A100 : var(--accent-A100), A200 : var(--accent-A200), A400 : var(--accent-A400), A700 : var(--accent-A700),
+    contrast: (50 : var(--accent-contrast-50), 100 : var(--accent-contrast-100), 200 : var(--accent-contrast-200), 300 : var(--accent-contrast-300), 400 : var(--accent-contrast-400), 500 : var(--accent-contrast-500), 600 : var(--accent-contrast-600), 700 : var(--accent-contrast-700), 800 : var(--accent-contrast-800), 900 : var(--accent-contrast-900), A100 : var(--accent-contrast-A100), A200 : var(--accent-contrast-A200), A400 : var(--accent-contrast-A400), A700 : var(--accent-contrast-A700))
+  )
+);
+
+$warn-palette: mat.define-palette(
+  (
+    50 : var(--warn-50), 100 : var(--warn-100), 200 : var(--warn-200), 300 : var(--warn-300), 400 : var(--warn-400), 500 : var(--warn-500), 600 : var(--warn-600), 700 : var(--warn-700), 800 : var(--warn-800), 900 : var(--warn-900), A100 : var(--warn-A100), A200 : var(--warn-A200), A400 : var(--warn-A400), A700 : var(--warn-A700),
+    contrast: (50 : var(--warn-contrast-50), 100 : var(--warn-contrast-100), 200 : var(--warn-contrast-200), 300 : var(--warn-contrast-300), 400 : var(--warn-contrast-400), 500 : var(--warn-contrast-500), 600 : var(--warn-contrast-600), 700 : var(--warn-contrast-700), 800 : var(--warn-contrast-800), 900 : var(--warn-contrast-900), A100 : var(--warn-contrast-A100), A200 : var(--warn-contrast-A200), A400 : var(--warn-contrast-A400), A700 : var(--warn-contrast-A700))
+  )
+);
+
+$card-variants: (
+  role: mat.define-palette(mat.$green-palette),
+  site: mat.define-palette(mat.$blue-palette),
+);
+
+$alert-variants: (
+  general: mat.define-palette(mat.$blue-palette),
+  success: mat.define-palette(mat.$green-palette),
+  warning: mat.define-palette(mat.$orange-palette),
+  error: mat.define-palette(mat.$red-palette),
+);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary-palette,
+      accent: $accent-palette,
+      warn: $warn-palette,
+    ),
+  )
+);
+
+@include mat.core();
+
+@include mat.all-component-themes($light-theme);
+@include components.theme('light', $light-theme, $card-variants, $alert-variants);
+
+.dark-theme {
+
+  $dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $primary-palette,
+      accent: $accent-palette,
+      warn: $warn-palette,
+    ),
+  )
+);
+  @include mat.all-component-colors($dark-theme);
+  @include components.theme('dark', $dark-theme, $card-variants, $alert-variants);
+}

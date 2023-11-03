@@ -1,0 +1,23 @@
+{
+    "app_title": "ARQUETIP",
+    "alt_general_img": "Logo Grupo ICA",
+    "alt_app_img": "Logo de l'arquetip",
+    "screen_title": "Accés a la plataforma",
+    "login_caption": "Accedir",
+    "clave_caption": "Cl@ve",
+    "clave_text": "També podeu iniciar sessió amb:",
+    "recover_login_caption": "Recuperar contrasenya",
+    "form_user_caption": "Usuari",
+    "form_user_placeholder": "Introdueixi el seu email",
+    "form_user_error": "El usuari és obligatori",
+    "form_password_caption": "Contrasenya",
+    "form_password_placeholder": "Introdueixi la seva contrasenya",
+    "form_password_error": "La contrasenya és obligatòria",
+    "reset_password_prompt": "Se us enviarà un email amb un link per canviar la vostra contrasenya a l'email {{email}}",
+    "reset_password_ok": "S'ha enviat un link al correu {{email}}",
+    "reset_password_error": "Heu d'introduir un usuari/email",
+    "recover_password_error": "El link ha caducat. O hi ha algun problema amb la recuperació de la contrasenya.",
+    "recover_password_required": "Heu de canviar el password. És important per a la seguretat",
+    "login_title": "Login",
+    "login_description": "Component login"
+}

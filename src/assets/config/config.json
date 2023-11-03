@@ -1,0 +1,12 @@
+{
+    "runAsDemo": false,
+    "apisBaseUrl": "http://20.228.166.250:8080/archetype",
+    "apisBaseUrlDev": "http://20.228.166.250:8080/archetype",
+    "redirectWhenLogin": "inicio",
+    "redirectWhenLogOut": "/login",
+    "redirectWhenExpireToken": "sesion-expirada",
+    "redirectWhenTimeout": "sesion-expirada",
+    "redirectWhenForbidden": "acceso-denegado",
+    "inactivityTimeout": 1800,
+    "inactivityWarning": 1740
+}
